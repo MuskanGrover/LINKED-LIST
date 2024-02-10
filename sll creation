@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+	int data;
+	node*next;
+};
+int main()
+{
+	struct node*head,*p,*q;
+	int val,i=1,num;
+	printf("\nENTER THE NUMBER OF NODES TO BE PRINTED: ");
+	scanf("%d",&num);
+	printf("\nENTER THE DATA PART OF THE HEAD NODE: ",i);
+	q=(struct node*)malloc(sizeof(struct node));
+	q->data=val;
+	q->next=NULL;
+	head=q;
+	for(int i=2;i<num;i++)
+	{
+		
+		printf("\nENTER DATA PART OF NODE: ");
+		scanf("%d,&val");
+		p=(struct node*)malloc(sizeof(struct node));
+	p->data=val;
+	p->next=NULL;
+	q->next=p;
+	q=q->next;
+	}
+	q=head;
+	while(q!=NULL)
+	{
+		printf("%d",q->data);
+		q=q->next;
+	}
+	
+}
